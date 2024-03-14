@@ -1,0 +1,41 @@
+/*style for the end.html*/
+html, body {
+    height: 100%;
+}
+
+#end {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+h1 {
+    font-family: Inter, sans-serif;
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 50px;
+    align-self: center;
+}
+
+label {
+    font-size: 19px;
+    font-family: Inter, sans-serif;
+}
+
+input {
+    height: 35px;
+    width: 250px;
+    font-size: 20px;
+    text-align: start;
+}
+
+#download {
+    margin-top: 60px;
+
+}

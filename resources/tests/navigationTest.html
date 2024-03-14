@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tests</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<main>
+
+    <script src="../../js/navigation.js"></script>
+    <script>
+
+        /**
+         * - navigationController test
+         * - gets the desired screen, switches it to the next screen
+         * - checks if the observedScreen gets the new values
+         * - changes the location as a side effect
+         * */
+
+        const navCtrl = NavigationController();
+
+        document.writeln(String(navCtrl.getScreen() === 0));
+        navCtrl.nextScreen();
+        document.writeln(String(navCtrl.getScreen() === 1));
+
+        let observedScreen = -1;
+        document.writeln(String(observedScreen === -1));
+
+        navCtrl.onScreenChanged(screen => observedScreen = screen);
+        document.writeln(String(observedScreen === 1));
+        navCtrl.nextScreen();
+        document.writeln(String(observedScreen === 2));
+
+
+    </script>
+
+
+</main>
+</body>
+</html>
+
+
+

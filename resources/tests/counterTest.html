@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tests</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<main>
+
+    <script src="../../js/counter.js"></script>
+
+    <script>
+
+        /**
+         * - counterController test
+         * - sets the counter to 0 and gets it, increases it and tests if the value is still correct
+         * - checks if the observedCount gets the new values
+         * */
+
+        const counterAppleCtrl = CounterController();
+
+        counterAppleCtrl.setCount(0);
+
+        document.writeln(String(counterAppleCtrl.getCount() === 0));
+        counterAppleCtrl.count();
+        document.writeln(String(counterAppleCtrl.getCount() === 1));
+
+        counterAppleCtrl.count();
+        counterAppleCtrl.count();
+        counterAppleCtrl.count();
+        counterAppleCtrl.count();
+        counterAppleCtrl.count();
+        document.writeln(String(counterAppleCtrl.getCount() === 6));
+
+        let observedCount = 0;
+        document.writeln(String(observedCount === 0));
+
+        counterAppleCtrl.onCountChanged(count => observedCount = count);
+        document.writeln(String(observedCount === 6));
+        counterAppleCtrl.count();
+        document.writeln(String(observedCount == 7));
+
+
+    </script>
+
+</main>
+</body>
+</html>
+
+
+

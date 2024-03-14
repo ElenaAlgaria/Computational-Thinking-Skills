@@ -1,0 +1,23 @@
+image: debian
+
+stages:
+  - pages
+
+pages:
+  stage: pages
+  script:
+    - mkdir ./public
+    - mkdir ./public/resources
+    - cp -r html/ ./public
+    - cp -r css/ ./public
+    - cp -r js/ ./public
+    - cp -r resources/images/ ./public/resources/images
+    - cp *.html ./public
+
+  artifacts:
+    paths:
+      - public
+
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+

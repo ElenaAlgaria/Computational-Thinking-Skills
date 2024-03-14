@@ -1,0 +1,122 @@
+/*style for the questions*/
+h1 {
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: [line1] auto [line2] auto [line3] auto [line4] auto [line5] auto [line6] auto [line7] auto [line8] auto;
+    grid-template-rows: [row1] auto [row2] auto [row3] auto [row4] auto;
+    align-items: center;
+    justify-items: center;
+    gap: 20px 15px;
+}
+
+#question {
+    grid-area: row1 / line1 / row1 / span 8;
+    justify-self: center;
+}
+
+#scene {
+    grid-area: row2 / line1 / row2 / span 3;
+}
+
+#field {
+    grid-area: row2 / line4 / row2 / span 5;
+    align-self: center;
+}
+
+
+#item1 {
+    grid-area: row3 / line1 / row3 / line1;
+}
+
+#item2 {
+    grid-area: row3 / line2 / row3 / line2;
+}
+
+#item3 {
+    grid-area: row3 / line3 / row3 / line3;
+}
+
+#item4 {
+    grid-area: row3 / line4 / row3 / line4;
+}
+
+#item5 {
+    grid-area: row3 / line5 / row3 / line5;
+}
+
+#item6 {
+    grid-area: row3 / line6 / row3 / line6;
+}
+
+#item7 {
+    grid-area: row3 / line7 / row3 / line7;
+}
+
+#item8 {
+    grid-area: row3 / line8 / row3 / line8;
+}
+
+#item9 {
+    grid-area: row4 / line1 / row4 / line1;
+}
+
+#item10 {
+    grid-area: row4 / line2 / row4 / line2;
+    visibility: initial;
+}
+
+#item11 {
+    grid-area: row4 / line3 / row4 / line3;
+    visibility: initial;
+}
+
+#item12 {
+    grid-area: row4 / line4 / row4 / line4;
+    visibility: initial;
+}
+
+#item13 {
+    grid-area: row4 / line5 / row4 / line5;
+    visibility: hidden;
+}
+
+#item14 {
+    grid-area: row4 / line6 / row4 / line6;
+    visibility: hidden;
+}
+
+#item15 {
+    grid-area: row4 / line7 / row4 / line7;
+    visibility: hidden;
+}
+
+#item16 {
+    grid-area: row4 / line8 / row4 / line8;
+    visibility: hidden;
+}
+
+#next {
+    grid-area: row5 / line8 / row5 / line8;
+    border-style: none;
+}
+
+
+@media only screen and (max-width: 800px) and (min-width: 600px) {
+    .grid-container {
+        gap: 15px 10px;
+    }
+
+    .grid-item-question {
+        justify-self: center;
+    }
+
+    #playground {
+        width: 80%;
+    }
+}

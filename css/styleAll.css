@@ -1,0 +1,26 @@
+/*style for all htmls */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow: hidden;
+    overscroll-behavior: none;
+    background: #B6B096;
+}
+
+#playground {
+    min-width: 40rem;
+    position: relative;
+    display: inline-block;
+}
+
+.button {
+    background: #41A1B7;
+    height: 60px;
+    width: 120px;
+    border-radius: 30px;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    color: white;
+}

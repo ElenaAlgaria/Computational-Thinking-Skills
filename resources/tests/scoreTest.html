@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tests</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<main>
+
+    <script src="../../js/score.js"></script>
+
+    <script>
+        /**
+         * - scoreController test
+         * - sets the score to 0 and gets it, increases it and tests if the value is still correct
+         * - checks if the observedScore gets the new value
+         * */
+
+        const scoreCtrl = ScoreController();
+
+        scoreCtrl.setScore(0);
+
+        document.writeln(String(scoreCtrl.getScore() === 0));
+        scoreCtrl.incrementScore();
+
+        document.writeln(String(scoreCtrl.getScore() === 1));
+
+        scoreCtrl.resetScore();
+        document.writeln(String(scoreCtrl.getScore() === 0));
+
+        let observedScore = -1;
+        document.writeln(String(observedScore === -1));
+
+        scoreCtrl.onScoreChanged(score => observedScore = score);
+        document.writeln(String(observedScore === 0));
+        scoreCtrl.incrementScore();
+        document.writeln(String(observedScore === 1));
+        scoreCtrl.resetScore();
+        document.writeln(String(observedScore === 0));
+
+    </script>
+
+
+</main>
+</body>
+</html>
+
+
+
